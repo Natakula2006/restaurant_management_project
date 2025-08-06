@@ -15,7 +15,7 @@ class MenuView(APIView):
     def get(self,request):
         try:
             menu = [{'name':'Margherita Pizza','description':'Classic pizza with tomato sauce and mozzarella','price':8.99},
-        {'name':'Veggie Burger','description':'Grilled veggie patty with lettuce,tomato,and cheese'},
+        {'name':'Veggie Burger','description':'Grilled veggie patty with lettuce,tomato,and cheese'.'price':10.01},
         {'name':'Pasta Alfredo','description':'Creamy Alfredo pasta with mushrooms and parmesan','price':10.99}]
             return Response(menu,status = status.HTTP_200_OK)
         except Exception as e:
