@@ -13,10 +13,13 @@ NOTE: Conside this as a reference and follow this same coding structure or forma
 # Create your views here.
 class MenuView(APIView):
     def get(self,request):
-        menu = [{'name':'Margherita Pizza','description':'Classic pizza with tomato sauce and mozzarella','price':8.99},
+        try:
+            menu = [{'name':'Margherita Pizza','description':'Classic pizza with tomato sauce and mozzarella','price':8.99},
         {'name':'Veggie Burger','description':'Grilled veggie patty with lettuce,tomato,and cheese'},
         {'name':'Pasta Alfredo','description':'Creamy Alfredo pasta with mushrooms and parmesan','price':10.99}]
-        return Response(menu,status = status.HTTP_200_OK)
+            return Response(menu,status = status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'error':str(e)},status = status.HTTP_500_INTERNAL_SERVER_ERROR)
 class ItemView(APIView):
 
     def get(self, request):
