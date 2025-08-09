@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        About Us - Restaurant</title>
+        <style>
+            body{
+            font-family:Arial,sans-serif;
+            background-color: #faf3e0;
+            text-align: center;
+            padding: 20px;}
+            h1{
+            color: #d35400;
+            }
+            p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            }
+            img{
+            margin-top:20px;
+            border-radius:10px;
+            width: 400px;}
+            a{
+            display:inline-block;
+            margin-top: 20px;
+            padding:10px 20px;
+            background: #d35400;
+            color:white;
+            text-decoration: none;
+            border-radius: 5px;
+            }
+            a:hover{
+            background: #e67e22;}
+            </style>
+            </head>
+            <body>
+                <h1>About Our Restaurant</h1>
+                <p>Welcome to our restaurant! we pride ourselves on serving delicious meals made with fresh ingredients. Whether you're here 
+                    for a quick lunch or a family dinner,we make sure every bite is worth it!</p>
+                    <img src= "{% static 'images/restaurant.jpg' %}" alt = "Restaurant Image">
+                    <br>
+                    <a href="{% url 'home' %}">Back to Home</a>
+            </body>
+            </html>
