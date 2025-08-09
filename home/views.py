@@ -5,3 +5,5 @@ from django.shortcuts import render
 def home(request):
     context = {'restaurant_name':settings.RESTAURANT_NAME}
     return render(request,'home.html',context)
+def about(request):
+    return render(request,'about.html')
