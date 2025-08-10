@@ -7,3 +7,6 @@ def home(request):
     return render(request,'home.html',context)
 def about(request):
     return render(request,'about.html')
+def contact_view(request):
+    request render(request,'contact.html')
+
