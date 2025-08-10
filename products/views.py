@@ -16,7 +16,7 @@ class MenuView(APIView):
         try:
             items = Item.objects.all()
             serializer = ItemSerializer(items,many=True)
-            return Response(serializer.data,statu= status.HTTP_200_OK
+            return Response(serializer.data,statu= status.HTTP_200_OK)
         except Exception as e:
             return Response({'error':str(e)},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
