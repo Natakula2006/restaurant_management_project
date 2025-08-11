@@ -6,5 +6,6 @@ urlpatterns = [
     path('api/menu/',MenuView.as_view(),name='menu'),
     path('about/',views.about,name='about'),
     path('contact/',views.contact_view,name='contact'),
+    path('reservations/',views.reservations,name = 'reservations'),
     
 ]
