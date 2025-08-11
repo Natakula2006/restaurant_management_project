@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Restaurant Management{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <h1>Restaurant Management</h1>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'menu_home' %}">Menu</a>
+                <a href= "{% url 'about' %}">about</a>
+                <a href="{% url 'contact' %}">contact</a>
+                <a href="{% url 'reservations'%}">reservations</a>
+            </nav>
+        </header>
+        {% include 'footer.html' %}
+        </body>
+        </html>
