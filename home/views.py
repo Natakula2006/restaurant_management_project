@@ -9,4 +9,6 @@ def about(request):
     return render(request,'about.html')
 def contact_view(request):
     request render(request,'contact.html')
+def reservations(request):
+    request render(request,'reservations.html')
 
